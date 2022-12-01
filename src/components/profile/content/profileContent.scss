@@ -1,0 +1,84 @@
+@import "../../../utils/theme.scss";
+
+.profile {
+  padding-bottom: 4rem;
+
+  &-content {
+    width: 50rem;
+    margin: auto;
+    background: #91787863;
+    backdrop-filter: blur(17.5rem);
+    box-shadow: 10px 4px 4px #00000099;
+    border-radius: 31.25rem 3.75rem 18.75rem 6.25rem;
+    padding: {
+      top: 8.75rem;
+      right: 6rem;
+      bottom: 3.5rem;
+      left: 7.5rem;
+    }
+    margin: {
+      top: 5rem;
+      bottom: 2rem;
+    }
+
+    &-img {
+      text-align: center;
+      img {
+        border-radius: 12.5rem 1.25rem 6.25rem 3.125rem;
+        object-fit: cover;
+      }
+    }
+
+    &-desc {
+      &-name {
+        h3 {
+          font: {
+            family: $secondaryFont;
+            size: 3.125rem;
+            weight: 800;
+          }
+          color: $black;
+          text-align: center;
+          padding-left: 35%;
+        }
+      }
+
+      &-details {
+        padding-left: 15%;
+        text-align: left;
+
+        p {
+          margin-bottom: 0rem;
+          line-height: 24px;
+          font: {
+            family: $secondaryFont;
+            style: italic;
+            weight: 100;
+            size: 1.25rem;
+          }
+          color: $black;
+        }
+      }
+    }
+  }
+
+  &-btn {
+    background: #35660e;
+    box-shadow: 0.625rem 0.25rem 0.25rem $shadowDark;
+    border-radius: 1.25rem;
+    border: none;
+    padding: 0.625rem 2.1875rem;
+    font: {
+      size: 1.875rem;
+      style: italic;
+    }
+    -webkit-text-stroke: 1px $textStroke;
+    color: $white;
+    transition: $transition;
+
+    &:hover {
+      transition: $transition;
+      box-shadow: 0.625rem 0.25rem 0.675rem $shadowHover;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@import "../../../utils/theme.scss";
+
+.header {
+  padding: 1rem 1.5rem;
+
+  h3 {
+    font-size: 1.875rem;
+  }
+
+  .register-link {
+    background: #40483a;
+    box-shadow: 0.625rem 0.25rem 0.25rem $shadowDark;
+    border-radius: 1.25rem;
+    color: $white;
+    -webkit-text-stroke: 1px $textStroke;
+    padding: {
+      top: 0.75rem;
+      right: 1rem;
+      bottom: 1rem;
+      left: 2.75rem;
+    }
+    text-decoration: none;
+    font: {
+      style: italic;
+      size: 1.875rem;
+    }
+    line-height: 1.875rem;
+    max-width: 15rem;
+    text-shadow: 0rem 0.25rem 0.25rem #00000040;
+    transition: $transition;
+
+    &:hover {
+      box-shadow: 0.625rem 0.25rem 0.75rem $shadowHover;
+      transition: $transition;
+    }
+  }
+}
