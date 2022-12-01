@@ -1,15 +1,10 @@
 import "./profileContent.scss";
 import checked from "../../../assets/icons/checked.svg";
-import { IProfile } from "../../../interfaces/api/IProfile";
+import { ProfileContentProps } from "../../../types/ProfileContentProps";
+import Spinner from "../../features/spinner/Spinner";
 
-type Props = {
-  counter: number;
-  data: IProfile | undefined;
-  handleNextProfiles: (num: number) => void;
-};
-
-const ProfileContent = ({ counter, data, handleNextProfiles }: Props) => {
-  if (!data) return <div>Loading...</div>;
+const ProfileContent = ({ counter, data, handleNextProfiles }: ProfileContentProps) => {
+  if (!data) return <Spinner />;
 
   return (
     <>

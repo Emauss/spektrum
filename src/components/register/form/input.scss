@@ -1,0 +1,75 @@
+@import "../../../themes/theme.scss";
+
+label {
+  font: {
+    family: $secondaryFont;
+    weight: 700;
+    size: 1.25rem;
+  }
+  color: $black;
+  margin-bottom: 0.5rem;
+}
+
+input {
+  width: 100%;
+  outline: 0;
+  border: none;
+  border-bottom: 2px solid;
+  font-size: 1.25rem;
+
+  &.error {
+    border-bottom-color: $error;
+  }
+}
+
+.errorMessage {
+  text-align: right;
+  font: {
+    family: $secondaryFont;
+    weight: 300;
+    size: 1.25rem;
+    style: italic;
+  }
+  color: $error;
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1.875rem;
+  height: 1.875rem;
+  border-radius: 0.25rem;
+  border: 0.25rem solid $blue;
+  outline: none;
+  cursor: pointer;
+  margin-bottom: -0.375rem;
+
+  &.checked {
+    background-color: $blue;
+    position: relative;
+
+    &::before {
+      content: "\2714";
+      display: inline-block;
+      font-size: 1em;
+      color: #fff;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &:disabled {
+    border-color: #c0c0c0;
+    background-color: #c0c0c0;
+  }
+
+  &:disabled + span {
+    color: #c0c0c0;
+  }
+
+  &.error {
+    border-color: $error;
+  }
+}

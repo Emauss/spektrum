@@ -1,11 +1,7 @@
-import { ReactElement, useEffect } from "react";
+import { useEffect } from "react";
+import { LayoutProps } from "../types/LayoutProps";
 
-type Props = {
-  children: ReactElement;
-  pageTitle: string;
-};
-
-const Layout = ({ children, pageTitle }: Props) => {
+const Layout = ({ children, pageTitle }: LayoutProps) => {
   useEffect(() => {
     document.title = pageTitle;
   }, [pageTitle]);
