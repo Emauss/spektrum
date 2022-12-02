@@ -39,32 +39,30 @@ const Register = () => {
   };
 
   return (
-    <>
-      <div className="form container">
-        <div className="form-header">
-          <h4>formularz rejestracyjny</h4>
-        </div>
-        <div className="form-content">
-          <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              void handleSubmit(submitForm)();
-            }}
-            autoComplete="off"
-          >
-            <FormInput label={"Login:"} name="login" control={control} />
-            <FormInput label={"Hasło:"} name="password" control={control} />
-            <FormInput label={"E-mail:"} name="email" control={control} />
-            <FormInput label={"Numer telefonu:"} name="phone" control={control} />
-            <FormInput label={"Akceptuję Regulamin"} name="accept" control={control} type="checkbox" />
-            <div className="form-content-btn mt-4">
-              <button type="submit">zapisz</button>
-            </div>
-            {!!response && <p className="fs-4 mt-3">{response}</p>}
-          </form>
-        </div>
+    <div className="form container">
+      <div className="form-header">
+        <h4>formularz rejestracyjny</h4>
       </div>
-    </>
+      <div className="form-content">
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            void handleSubmit(submitForm)();
+          }}
+          autoComplete="off"
+        >
+          <FormInput label={"Login:"} name="login" control={control} />
+          <FormInput label={"Hasło:"} name="password" control={control} />
+          <FormInput label={"E-mail:"} name="email" control={control} />
+          <FormInput label={"Numer telefonu:"} name="phone" control={control} />
+          <FormInput label={"Akceptuję Regulamin"} name="accept" control={control} type="checkbox" />
+          <div className="form-content-btn mt-4">
+            <button type="submit">zapisz</button>
+          </div>
+          {!!response && <p className="fs-4 mt-3">{response}</p>}
+        </form>
+      </div>
+    </div>
   );
 };
 

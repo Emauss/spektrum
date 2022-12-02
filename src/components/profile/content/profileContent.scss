@@ -26,6 +26,7 @@
       img {
         border-radius: 12.5rem 1.25rem 6.25rem 3.125rem;
         object-fit: cover;
+        height: 24rem;
       }
     }
 
@@ -117,6 +118,12 @@
           h3 {
             font-size: 7vw;
           }
+        }
+      }
+
+      &-img {
+        img {
+          height: 50vw;
         }
       }
     }

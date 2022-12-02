@@ -14,9 +14,13 @@ export const getProfile = async (number: number): Promise<IProfile> => {
     });
 };
 
+export const getImage = async (): Promise<File> => {
+  return await axios.get(`${process.env.REACT_APP_API_IMG_URL}`);
+};
+
 export const postForm = async (formData: FormValues, allData: IProfileSpecific[]): Promise<null> => {
   return await axios
-    .post(`https://example/`, { formParams: formData, profiles: JSON.stringify(allData) })
+    .post(`https://example/`, { ...formData, star_wars_data: JSON.stringify(allData) })
     .then((response) => {
       return response.data;
     })
