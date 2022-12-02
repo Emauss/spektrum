@@ -42,13 +42,36 @@
           size: 1.875rem;
           style: italic;
         }
-        -webkit-text-stroke: 1px $textStroke;
+        -webkit-text-stroke: 0.0625rem $textStroke;
         color: $white;
         transition: $transition;
 
         &:hover {
           transition: $transition;
           box-shadow: 0.625rem 0.25rem 0.675rem $shadowHover;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    padding: {
+      right: 1.5rem;
+      left: 1.5rem;
+    }
+
+    &-header {
+      h4 {
+        letter-spacing: 0.1rem;
+        text-align: right;
+      }
+    }
+
+    &-content {
+      &-btn {
+        button[type="submit"] {
+          font-size: 1.5rem;
+          padding: 0.5rem 3rem;
         }
       }
     }

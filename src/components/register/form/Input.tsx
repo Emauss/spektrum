@@ -17,7 +17,7 @@ const Input = ({ label, className, error, errorMessage, disableError, id, ...pro
               data-testid="input"
               {...props}
             />
-            <label role="button" htmlFor={id} className="me-5 ps-3">
+            <label role="button" htmlFor={id} className="me-md-5 ps-3">
               {label}
             </label>
           </span>

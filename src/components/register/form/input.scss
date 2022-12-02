@@ -14,7 +14,7 @@ input {
   width: 100%;
   outline: 0;
   border: none;
-  border-bottom: 2px solid;
+  border-bottom: 0.125rem solid;
   font-size: 1.25rem;
 
   &.error {
@@ -31,6 +31,11 @@ input {
     style: italic;
   }
   color: $error;
+
+  @media (max-width: 767px) {
+    font-size: 1rem;
+    display: block;
+  }
 }
 
 .checkbox-wrapper input[type="checkbox"] {

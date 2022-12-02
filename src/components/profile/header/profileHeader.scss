@@ -5,6 +5,10 @@
 
   h3 {
     font-size: 1.875rem;
+    @media (max-width: 767px) {
+      font-size: 1.5rem;
+      margin-right: 2vw;
+    }
   }
 
   .register-link {
@@ -12,7 +16,7 @@
     box-shadow: 0.625rem 0.25rem 0.25rem $shadowDark;
     border-radius: 1.25rem;
     color: $white;
-    -webkit-text-stroke: 1px $textStroke;
+    -webkit-text-stroke: 0.0625rem $textStroke;
     padding: {
       top: 0.75rem;
       right: 1rem;
@@ -32,6 +36,17 @@
     &:hover {
       box-shadow: 0.625rem 0.25rem 0.75rem $shadowHover;
       transition: $transition;
+    }
+
+    @media (max-width: 767px) {
+      font-size: 1.25rem;
+      padding: {
+        top: 0.75rem;
+        right: 4vw;
+        bottom: 1rem;
+        left: 5vw;
+      }
+      width: min-content;
     }
   }
 }
