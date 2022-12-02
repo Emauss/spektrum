@@ -7,9 +7,11 @@ import FormInput from "../../components/register/form/FormInput";
 import { postForm } from "../../api/Api";
 import { useState } from "react";
 import { AxiosError } from "axios";
+import { useGlobalContext } from "../../context/DataContext";
 
 const Register = () => {
   const [response, setResponse] = useState<string>("");
+  const { allData } = useGlobalContext();
 
   const { handleSubmit, control } = useForm<FormValues>({
     defaultValues: {
@@ -25,9 +27,9 @@ const Register = () => {
   const submitForm: SubmitHandler<FormValues> = (data) => {
     setResponse("");
 
-    postForm(data).then(
+    postForm(data, allData).then(
       (res) => {
-        console.log("res", res);
+        console.log(res);
       },
       (err: AxiosError) => {
         console.log(err.message);

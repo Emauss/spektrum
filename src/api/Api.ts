@@ -1,5 +1,6 @@
 import axios from "axios";
 import { IProfile } from "../interfaces/api/IProfile";
+import { IProfileSpecific } from "../interfaces/api/IProfileSpecific";
 import { FormValues } from "../types/FormValues";
 
 export const getProfile = async (number: number): Promise<IProfile> => {
@@ -13,9 +14,9 @@ export const getProfile = async (number: number): Promise<IProfile> => {
     });
 };
 
-export const postForm = async (formData: FormValues): Promise<null> => {
+export const postForm = async (formData: FormValues, allData: IProfileSpecific[]): Promise<null> => {
   return await axios
-    .post(`https://example/`, { params: formData })
+    .post(`https://example/`, { formParams: formData, profiles: JSON.stringify(allData) })
     .then((response) => {
       return response.data;
     })
